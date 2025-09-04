@@ -1,0 +1,12 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+@import "../styles/reset";
+@import "../styles/main";
+
+@import "../styles/style-components/navbar";
+
+body {
+  font-family: Arial, sans-serif;
+  background: $background;
+  color: $text-color;
+}

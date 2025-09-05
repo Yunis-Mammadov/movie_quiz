@@ -1,0 +1,138 @@
+$primary: #fbbf24; // sarı
+$secondary: #0ea5e9; // mavi
+$bg: #0f172a; // fon
+$text: #e2e8f0;
+
+.rules-container {
+    background-color: $bg;
+    border: 1px solid $primary;
+    border-radius: 12px;
+    padding: 30px;
+    width: 750px;
+    margin: 50px auto;
+    color: $text;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    .rules-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 30px;
+
+        .rules-image {
+            img {
+                max-width: 250px;
+                height: 100%;
+                border-radius: 8px;
+                transition: 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .rules-text {
+            max-width: 400px;
+
+            h1 {
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 20px;
+
+                .highlight {
+                    color: $primary;
+                    font-style: italic;
+                }
+
+                .number {
+                    color: $secondary;
+                    margin: 0 5px;
+                }
+            }
+
+            p {
+                margin-bottom: 15px;
+                font-size: 15px;
+                color: $text;
+                text-align: justify;
+            }
+        }
+    }
+
+    .start-btn {
+        background: $primary;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: darken($primary, 10%);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .rules-container {
+        width: 90%;
+        padding: 20px;
+
+        .rules-content {
+            gap: 1.5rem;
+
+            .rules-text {
+                max-width: 100%;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .rules-container {
+        width: 95%;
+        padding: 15px;
+
+        .rules-content {
+            flex-direction: column;
+            text-align: center;
+
+            .rules-image {
+                img {
+                    max-width: 180px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .rules-text {
+                h1 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .start-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 15px;
+        }
+    }
+}

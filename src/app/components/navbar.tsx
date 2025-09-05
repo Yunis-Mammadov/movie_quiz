@@ -13,7 +13,8 @@ export default function Navbar() {
 
         <div className="navbar-logo">
           <h1>
-            <span style={{ color: "#f2b705" }}>Movie</span><span style={{ color: "#0dd0f7" }}>Draft</span>
+            <span style={{ color: "#f2b705" }}>Movie</span>
+            <span style={{ color: "#0dd0f7" }}>Draft</span>
           </h1>
         </div>
 

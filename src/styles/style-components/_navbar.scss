@@ -9,27 +9,10 @@
         width: 80%;
         margin: 0 auto;
 
-
-        .btn {
-            padding: 0.5rem 1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #0dd0f7;
-            background-color: transparent;
-
-            &:hover {
-                color: black;
-                background-color: #f2b705;
-                box-shadow: 0 4px 12px (54, 80, 107, 0.4);
-                transform: translateY(-2px);
-            }
-
-            &:active {
-                transform: scale(0.98);
-            }
+        .btn{
+            @include btn();
         }
+
     }
 }
 

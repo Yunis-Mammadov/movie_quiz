@@ -4,9 +4,13 @@
 @import "../styles/main";
 
 @import "../styles/style-components/navbar";
+@import "../styles/style-components/rules";
 
 body {
   font-family: Arial, sans-serif;
-  background: $background;
-  color: $text-color;
+  background-color: #010b13;
+}
+
+h1,p{
+  color: white;
 }

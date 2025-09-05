@@ -1,6 +1,6 @@
 "use client";
 
-import Rules from "@/app/components/rules/rules";
+import Rules from "@/app/components/rules";
 import { useState } from "react";
 
 export default function Connections() {

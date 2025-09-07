@@ -1,6 +1,6 @@
 "use client";
 
-import Rules from "@/app/components/rules";
+import Rules from "@/app/quiz/[gameId]/rules/page";
 import { useState } from "react";
 
 export default function Wordle() {

@@ -1,6 +1,6 @@
 "use client";
 
-import Rules from "@/app/components/rules";
+import Rules from "@/app/rules/whobox";
 import { useState } from "react";
 
 export default function Top10() {

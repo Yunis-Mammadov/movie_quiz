@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { games } from "./data/games"; 
+import { games } from "@/lib/data/games";
 
 export default function HomePage() {
   return (
     <div className="home-container">
-      <p className="">Select the game you want to play:</p>
+      <p>Select the game you want to play:</p>
       <div className="home-links">
         {games.map((game) => (
-          <Link key={game.id} href={`/quiz/${game.id}`}>
+          <Link key={game.id} href={`/rules/${game.id}`}>
             <div className="card">
               <img
                 src="https://futbol-11.com/media/thumbnail/legacy.webp"

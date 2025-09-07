@@ -56,7 +56,9 @@
           align-items: center;
           flex-direction: column;
           font-size: 20px;
-          font-weight: 600;
+          font-weight: 500;
+          // word-spacing: 0.3rem;
+          letter-spacing: 2px;
           height: 5rem;
           background-color: #0a2f40;
           color: white;
@@ -64,6 +66,11 @@
 
           &:hover {
             background-color: #f2b705;
+            color: black; 
+            font-weight: 600;
+          }
+
+          &:hover p{
             color: black;
           }
         }

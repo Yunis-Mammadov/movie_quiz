@@ -1,3 +1,5 @@
+$primary: #fbbf24; 
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -5,22 +7,16 @@
 }
 
 @mixin btn {
-  padding: 0.5rem 1rem;
-  font-weight: 600;
+  background: $primary;
+  border: none;
+  padding: 12px 25px;
   border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  color: #0dd0f7;
-  background-color: transparent;
+  transition: 0.3s ease;
 
   &:hover {
-    color: black;
-    background-color: #f2b705;
-    box-shadow: 0 4px 12px (54, 80, 107, 0.4);
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: scale(0.98);
+    background: darken($primary, 10%);
   }
 }

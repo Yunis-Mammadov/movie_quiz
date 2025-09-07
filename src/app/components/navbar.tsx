@@ -1,5 +1,8 @@
-import { AiOutlineInstagram } from "react-icons/ai"; // Instagram icon
+import { AiOutlineInstagram } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
+import { tomorrow } from "../../lib/fonts/fonts";
+import Link from "next/link";
+
 
 export default function Navbar() {
   return (
@@ -12,10 +15,12 @@ export default function Navbar() {
 
 
         <div className="navbar-logo">
-          <h1>
-            <span style={{ color: "#f2b705" }}>Movie</span>
-            <span style={{ color: "#0dd0f7" }}>Draft</span>
-          </h1>
+          <Link href="/">
+            <h1 className={tomorrow.className}>
+              <span style={{ color: "#f2b705" }}>Movie</span>
+              <span style={{ color: "#0dd0f7" }}>Draft</span>
+            </h1>
+          </Link>
         </div>
 
 

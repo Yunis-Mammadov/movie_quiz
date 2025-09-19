@@ -9,7 +9,6 @@ export default function Undercover() {
   const [submitted, setSubmitted] = useState(false);
   const [stats, setStats] = useState<{ correct: number; wrong: number; missed: number } | null>(null);
 
-  // Yüklənəndə localStorage yoxlanır
   useEffect(() => {
     const today = new Date().toISOString().split("T")[0];
 
@@ -32,7 +31,7 @@ export default function Undercover() {
   }, []);
 
   const handleSelect = (id: number) => {
-    if (submitted) return; // artıq submit olunubsa seçmək olmaz
+    if (submitted) return; 
     let newSelected = [...selected];
     if (newSelected.includes(id)) {
       newSelected = newSelected.filter((item) => item !== id);

@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { tomorrow } from "@/lib/fonts/fonts"
 
-export default function ImpostorRules() {
+export default function Top10Rules() {
     return (
         <div className="rules-container">
             <h1 className={tomorrow.className} style={{textAlign:"center"}}>
-                <span style={{ color: "#f2b705" }}>Impo</span>
-                <span style={{ color: "#0dd0f7" }}>stor</span>
+                <span style={{ color: "#f2b705" }}>Top</span>
+                <span style={{ color: "#0dd0f7" }}>10</span>
             </h1>
             <div className="rules-content">
                 <div className="rules-image">
@@ -33,7 +33,7 @@ export default function ImpostorRules() {
                         name the player.
                     </p>
 
-                    <Link href="/quiz/impostor">
+                    <Link href="/quiz/top10">
                         <button className="start-btn">Start Game</button>
                     </Link>
                 </div>

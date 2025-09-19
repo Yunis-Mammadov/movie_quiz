@@ -1,0 +1,353 @@
+.undercover-wrapper {
+    min-height: 95vh;
+    min-width: 100%;
+    background: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    // background-color: lime;
+}
+
+.circle-layout {
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    // background-color: blue;
+
+    .card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        background: #0f1f3a;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #00bfff;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+            margin-bottom: 5px;
+            // background-color: red;
+        }
+
+
+
+        span {
+            background: #00bfff;
+            color: #000;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            text-align: center;
+            width: 100%;
+            height: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .card.selected {
+        background-color: #dede3c;
+    }
+
+    .card.correct {
+        background-color: lime;
+    }
+
+    .card.wrong {
+        background-color: red;
+    }
+
+    .card.missed {
+        background-color: gray;
+    }
+
+    // Desktop dairəvi düzülüş
+    @for $i from 1 through 10 {
+        .card:nth-child(#{$i}) {
+            $angle: (
+                360deg / 10) * ($i - 1
+            );
+        $radius: 260px; // desktop radius
+        transform: translate(-50%, -50%) rotate($angle) translate($radius) rotate(-$angle);
+    }
+}
+}
+
+
+.center-text {
+    position: absolute;
+    top: 50%; // ekranın ortasına
+    left: 50%;
+    transform: translate(-50%, -50%); // tam ortalamaq üçün
+    text-align: center;
+    width: 100%; // yazı ortada qalsın
+    max-width: 300px;
+
+    .stats {
+        min-height: 9rem;
+    }
+
+    .category {
+        margin: 0.5rem 0;
+        padding: 0.4rem 1rem;
+        border: 2px solid #00bfff;
+        border-radius: 8px;
+    }
+
+
+    .red {
+        color: #ff4d4f;
+        font-weight: bold;
+    }
+
+    .submit-btn {
+        margin-top: 2rem;
+        padding: 0.6rem 1.5rem;
+        background: gold;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .button-link {
+        display: inline-block;
+        padding: 0.5rem 1.2rem;
+        background-color: #0ea5e9;
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #0284c7;
+        }
+    }
+}
+
+
+//
+// 600px-dən kiçikdə: radius və kart ölçüsü azalır
+//
+@media (max-width: 600px) {
+    .circle-layout {
+        width: 300px;
+        height: 350px;
+        margin-top: -100px;
+
+        .selected {
+            background-color: yellowgreen;
+        }
+
+        .card {
+            width: 60px;
+            height: 90px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            span {
+                font-size: 0.7rem;
+            }
+        }
+
+        @for $i from 1 through 10 {
+            .card:nth-child(#{$i}) {
+                $angle: (
+                    360deg / 10) * ($i - 1
+                );
+            $radius: 180px; // daha kiçik radius
+            transform: translate(-50%, -50%) rotate($angle) translate($radius) rotate(-$angle);
+        }
+    }
+}
+
+.center-text {
+    text-align: center;
+    max-width: 200px;
+    top: 40%;
+
+    .category {
+        margin: 0.5rem 0;
+        padding: 0.4rem 1rem;
+        border: 2px solid #00bfff;
+        border-radius: 8px;
+    }
+
+    .red {
+        color: #ff4d4f;
+        font-weight: bold;
+    }
+
+    .submit-btn {
+        margin-top: 2rem;
+        padding: 0.6rem 1.5rem;
+        background: gold;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .button-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+}
+
+
+@media (max-width: 400px) {
+    .circle-layout {
+        position: relative;
+        max-width: 500px;
+        min-height: 500px;
+        margin-top: -100px;
+
+
+        .card {
+            position: absolute;
+            width: 65px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            span {
+                font-size: 0.7rem;
+                text-align: center;
+            }
+        }
+
+        .card:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            transform: translate(-50%, 0);
+        }
+
+        .card:nth-child(2) {
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .card:nth-child(3) {
+            top: 10%;
+            left: 80%;
+            transform: translate(-50%, 0);
+        }
+
+        // Aşağı 3 card
+        .card:nth-child(4) {
+            top: 80%;
+            left: 20%;
+            transform: translate(-50%, 0);
+        }
+
+        .card:nth-child(5) {
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .card:nth-child(6) {
+            top: 80%;
+            left: 80%;
+            transform: translate(-50%, 0);
+        }
+
+        // Solda 2 card
+        .card:nth-child(7) {
+            top: 40%;
+            left: -10%;
+            transform: translate(0, -50%);
+        }
+
+        .card:nth-child(8) {
+            top: 70%;
+            left: -10%;
+            transform: translate(0, -50%);
+        }
+
+        // Sağda 2 card
+        .card:nth-child(9) {
+            top: 40%;
+            left: 90%;
+            transform: translate(0, -50%);
+        }
+
+        .card:nth-child(10) {
+            top: 70%;
+            left: 90%;
+            transform: translate(0, -50%);
+        }
+    }
+
+
+    .center-text {
+        text-align: center;
+        max-width: 130px;
+        top: 45%;
+
+        .category {
+            margin: 0.5rem 0;
+            padding: 0.4rem 1rem;
+            border: 2px solid #00bfff;
+            border-radius: 8px;
+        }
+
+        .red {
+            color: #ff4d4f;
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            margin-top: 2rem;
+            padding: 0.6rem 1.5rem;
+            background: gold;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .button-link {
+            padding: 0.5rem 0.8rem;
+            font-size: 0.8rem;
+        }
+
+    }
+}

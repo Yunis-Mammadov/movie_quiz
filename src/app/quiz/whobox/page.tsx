@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { dailyWhoboxGames } from "@/lib/data/base";
 import { tomorrow } from "@/lib/fonts/fonts";
+import { dailyWhoboxGames } from "@/lib/data/whobox";
 
 export default function Whobox() {
   const [game, setGame] = useState({

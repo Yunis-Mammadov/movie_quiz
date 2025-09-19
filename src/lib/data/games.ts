@@ -1,6 +1,6 @@
 export const games = [
   { id: "whobox", title: "Who is in the Box?" },
-  { id: "impostor", title: "Impostor" },
+  { id: "undercover", title: "Undercover" },
   { id: "pyramid", title: "Pyramid" },
   { id: "connections", title: "Connections" },
   { id: "link", title: "Link" },
